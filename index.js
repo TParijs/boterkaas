@@ -29,7 +29,7 @@ function cellClicked(){
     if(options[cellIndex] != "" || !running){ //als er niks staat update de cell
         return;
     } 
-    const audio = new Audio("img/click2.mp3"); // als er geklikt word speel audio af
+    const audio = new Audio("/img/click2.mp3"); // als er geklikt word speel audio af
     audio.play();
     updateCell(this, cellIndex);
     checkWinner();
@@ -66,7 +66,7 @@ function checkWinner(){ //check winner als die er niet is ga verder
 
     if(roundWon){ //wanneer gewonnen is toon Wins en speel audio af
         statusText.textContent = `${currentPlayer} wins!`;
-        let source = "img/wooo.mp3"
+        let source = "/img/wooo.mp3"
     const audio = document.createElement("audio");
     audio.autoplay = true;
     audio.load()
@@ -79,7 +79,7 @@ function checkWinner(){ //check winner als die er niet is ga verder
     else if(!options.includes("")){ // wanneer er gelijkspel is toon Draw en speel audio af
         statusText.textContent = `Draw!`;
         running = false;
-        let source = "img/draw.mp3"
+        let source = "/img/draw.mp3"
     const audio = document.createElement("audio");
     audio.autoplay = true;
     audio.load()
@@ -101,7 +101,7 @@ function restartGame(){  //reset alle opties
     statusText.textContent = `${currentPlayer}'s turn`;
     cells.forEach(cell => cell.textContent = "");
     running = true;
-    let source = "img/reset1.mp3" //waneer restart wordt geklikt speel audio af en reset het spel
+    let source = "/img/reset1.mp3" //waneer restart wordt geklikt speel audio af en reset het spel
 const audio = document.createElement("audio");
 audio.autoplay = true;
 audio.volume = 0.5
@@ -112,7 +112,7 @@ audio.addEventListener("load", function() {
 audio.src = source;
 }
 
-let source = "img/jazz.mp3" //background muziek
+let source = "/img/jazz.mp3" //background muziek
 const audio = document.createElement("audio");
 audio.autoplay = true;
 audio.loop = true;
