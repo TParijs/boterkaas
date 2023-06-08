@@ -29,7 +29,7 @@ function cellClicked(){
     if(options[cellIndex] != "" || !running){ //als er niks staat update de cell
         return;
     } 
-    const audio = new Audio("/img/click2.mp3"); // als er geklikt word speel audio af
+    const audio = new Audio("img/click2.mp3"); // als er geklikt word speel audio af
     audio.play();
     updateCell(this, cellIndex);
     checkWinner();
@@ -66,7 +66,7 @@ function checkWinner(){ //check winner als die er niet is ga verder
 
     if(roundWon){ //wanneer gewonnen is toon Wins en speel audio af
         statusText.textContent = `${currentPlayer} wins!`;
-        let source = "/img/wooo.mp3"
+        let source = "img/wooo.mp3"
     const audio = document.createElement("audio");
     audio.autoplay = true;
     audio.load()
