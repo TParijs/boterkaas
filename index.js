@@ -29,7 +29,7 @@ function cellClicked(){
     if(options[cellIndex] != "" || !running){ //als er niks staat update de cell
         return;
     } 
-    const audio = new Audio("/webcatalogus/img/click2.mp3"); // als er geklikt word speel audio af
+    const audio = new Audio("/img/click2.mp3"); // als er geklikt word speel audio af
     audio.play();
     updateCell(this, cellIndex);
     checkWinner();
